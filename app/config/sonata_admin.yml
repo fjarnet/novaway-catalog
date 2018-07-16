@@ -1,0 +1,43 @@
+services:
+    admin.book:
+        class: Novaway\AdminBundle\Admin\BookAdmin
+        arguments: [~, Novaway\CommonBundle\Entity\Book, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Book, group: articles }
+        public: true
+
+    admin.blueray:
+        class: Novaway\AdminBundle\Admin\BluerayAdmin
+        arguments: [~, Novaway\CommonBundle\Entity\Blueray, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Blueray, group: articles }
+        public: true
+
+
+    admin.dvd:
+        class: Novaway\AdminBundle\Admin\DvdAdmin
+        arguments: [~, Novaway\CommonBundle\Entity\Dvd, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Dvd, group: articles }
+        public: true
+
+    admin.actor:
+        class: Novaway\AdminBundle\Admin\ActorAdmin
+        arguments: [~, Novaway\CommonBundle\Entity\Actor, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Actor, group: persons }
+        public: true
+
+    admin.director:
+        class: Novaway\AdminBundle\Admin\DirectorAdmin
+        arguments: [~, Novaway\CommonBundle\Entity\Director, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Director, group: persons }
+        public: true
+
+    admin.author:
+        class: Novaway\AdminBundle\Admin\AuthorAdmin
+        arguments: [~, Novaway\CommonBundle\Entity\Author, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Author, group: persons }
+        public: true

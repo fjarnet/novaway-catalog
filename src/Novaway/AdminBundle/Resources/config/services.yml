@@ -1,0 +1,4 @@
+services:
+#    novaway_admin.example:
+#        class: Novaway\AdminBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -1,0 +1,14 @@
+isan.label: ISAN
+title.label: Titre
+director.label: Directeur
+actors.label: Acteurs
+date.label: Date
+duration.label: Durée
+summary.label: Résumé
+price.label: Prix
+firstName.label: Prénom
+lastName.label: Nom
+publishedAt.label: Publié le
+author.label: Auteur
+isbn.label: ISBN
+nbPages.label: Nb de pages

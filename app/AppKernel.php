@@ -29,6 +29,7 @@ class AppKernel extends Kernel
             new FOS\ElasticaBundle\FOSElasticaBundle(),
 
             new Novaway\CommonBundle\NovawayCommonBundle(),
+            new Novaway\AdminBundle\NovawayAdminBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

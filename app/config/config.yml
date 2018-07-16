@@ -5,6 +5,7 @@ imports:
     - { resource: sonata_admin.yml }
     - { resource: gedmo.yml }
     - { resource: "@NovawayCommonBundle/Resources/config/services.yml" }
+    - { resource: "@NovawayAdminBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration

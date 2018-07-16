@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+</head>
+<body>
+<div class="container">
+
+    <a href="/"><svg class="logo" width="225px" height="70px" viewBox="0 0 225 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="logo" fill-rule="nonzero">
+                    <path d="M53.3658421,63.0266413 C52.3235014,66.0870599 48.9134158,67.7588011 45.849667,66.7131304 L6.95337774,53.3525214 C3.89295909,52.3101808 2.22121789,48.9000951 3.26688868,45.8363463 L16.6274976,6.94005709 C17.6698382,3.87963844 21.0799239,2.20789724 24.1436727,3.25356803 L63.0399619,16.614177 C66.1003806,17.6565176 67.7721218,21.0666032 66.726451,24.130352 L53.3658421,63.0266413 Z" transform="rotate(0 25 25)" id="losange-bg" class="logo-los1" fill="#EE731B" opacity="0.699999988"></path>
+                    <path d="M39.1693625,68.2450048 C36.8715509,70.5428164 33.1151284,70.5428164 30.820647,68.2450048 L1.73501427,39.2293054 C-0.562797336,36.9314938 -0.562797336,33.1750714 1.73501427,30.8805899 L30.7507136,1.72502379 C33.0485252,-0.572787821 36.8049477,-0.572787821 39.0994291,1.72502379 L68.2549952,30.8106565 C70.5528069,33.1084681 70.5528069,36.8648906 68.2549952,39.159372 L39.1693625,68.2450048 Z" id="losange" class="logo-los2" fill="#EC671C"></path>
+                    <g id="N" transform="translate(24.410086, 21.046622)" fill="#FFFFFF">
+                        <polygon points="0.00999048525 27.7169363 0.00999048525 0.0233111323 19.0052331 21.5228354 19.0052331 0.0233111323 21.369648 0.0233111323 21.369648 27.7169363 2.30447193 6.0076118 2.30447193 27.7169363"></polygon>
+                        <polygon points="4.18268316 0.0233111323 7.17649857 0.0233111323 13.5770695 7.25975262 13.5770695 0.0233111323 15.8748811 0.0233111323 15.8748811 13.1041865"></polygon>
+                        <polygon points="17.1270219 27.7169363 14.2031399 27.7169363 7.73263559 20.4105614 7.73263559 27.7169363 5.50475737 27.7169363 5.50475737 14.5661275"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </a>
+
+    <hr />
+
+    {% block body %}{% endblock %}
+</div>
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% endblock %}
+</body>
 </html>

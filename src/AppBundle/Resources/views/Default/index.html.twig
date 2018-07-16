@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>{{ 'hp.lastBooks'|trans }}</h2>
+
+        <ul>
+        {% for book in books %}
+            {# @var book \Novaway\CommonBundle\Entity\Book #}
+            <li><a href="{{ path('novaway_book_show', {'book': book.id}) }}">{{ book }}</a></li>
+        {% endfor %}
+        </ul>
+
+        <div class="navigation">
+            {{ knp_pagination_render(books) }}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h2>{{ 'hp.lastMovies'|trans }}</h2>
+
+        <ul>
+            {% for movie in movies %}
+                {# @var movie \Novaway\CommonBundle\Entity\Movie #}
+                <li><a href="{{ path('novaway_movie_show', {'movie': movie.id}) }}">{{ movie }}</a></li>
+            {% endfor %}
+        </ul>
+
+        <div class="navigation">
+            {{ knp_pagination_render(movies) }}
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        {{ form_start(form, {'method': 'GET'}) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+</div>
+{% endblock %}

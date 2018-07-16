@@ -1,0 +1,7 @@
+hp:
+    lastBooks: Derniers livres
+    lastMovies: Derniers films
+
+search_form:
+    q.label: Recherche libre
+    submit.label: Rechercher

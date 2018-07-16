@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{# @var movie \Novaway\CommonBundle\Entity\Movie #}
+
+<a href="{{ path('homepage') }}">&laquo; Homepage</a>
+
+<h1>
+    {{ movie }}
+
+    {% if movie.director is not empty %}
+    <br /><small>{{ movie.director }}</small>
+    {% endif %}
+</h1>
+
+{% if movie.summary is not empty %}
+<blockquote>
+    {{ movie.summary }}
+</blockquote>
+{% endif %}
+
+    <p>{{ 'isan.label'|trans }} : {{ movie.isan }}</p>
+    <p>{{ 'date.label'|trans }} : {{ movie.date|date }}</p>
+    <p>{{ 'duration.label'|trans }} : {{ movie.duration }} &quot;</p>
+    <p>{{ 'price.label'|trans }} : {{ movie.price }} &euro;</p>
+
+    {{ 'actors.label'|trans }} :
+    <ul>
+    {% for actor in movie.actors %}
+        <li>{{ actor }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}

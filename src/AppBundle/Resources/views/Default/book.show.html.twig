@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{# @var book \Novaway\CommonBundle\Entity\Book #}
+
+<a href="{{ path('homepage') }}">&laquo; Homepage</a>
+
+
+<h1>
+    {{ book }}
+
+    {% if book.author is not empty %}
+        <br /><small>{{ book.author }}</small>
+    {% endif %}
+</h1>
+
+{% if book.summary is not empty %}
+<blockquote>
+    {{ book.summary }}
+</blockquote>
+{% endif %}
+
+    <p>{{ 'isbn.label'|trans }} : {{ book.isbn }}</p>
+    <p>{{ 'nbPages.label'|trans }} : {{ book.nbPages }}</p>
+    <p>{{ 'price.label'|trans }} : {{ book.price }} &euro;</p>
+
+{% endblock %}

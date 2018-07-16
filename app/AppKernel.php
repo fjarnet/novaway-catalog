@@ -27,6 +27,8 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new FOS\ElasticaBundle\FOSElasticaBundle(),
+
+            new Novaway\CommonBundle\NovawayCommonBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

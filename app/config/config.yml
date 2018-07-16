@@ -65,3 +65,29 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+sonata_block:
+    blocks:
+        # enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+
+        # ...
+
+sonata_admin:
+    title: Novaway
+    templates:
+        dashboard: '@SonataAdmin/Core/dashboard.html.twig'
+
+knp_paginator:
+    default_options:
+    template:
+        pagination: '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig'
+
+#fos_elastica:
+#    clients:
+#        default:
+#            host: '%elastic_search.host%'
+#            port: '%elastic_search.port%'
+#            username: elastic
+#            password: '%elastic_search.password%'

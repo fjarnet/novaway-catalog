@@ -23,4 +23,4 @@ Initialisation du projet :
 URLs de connexion :
 
 - http://novaway.local/app_dev.php
-- http://novaway.local/app_dev.php/admin/
+- http://novaway.local/app_dev.php/admin/ (admin / password)

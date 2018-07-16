@@ -20,3 +20,7 @@ Initialisation du projet :
 - `php bin/console doctrine:schema:update --force`
 - `php bin/console assets:install`
 
+URLs de connexion :
+
+- http://novaway.local/app_dev.php
+- http://novaway.local/app_dev.php/admin/

@@ -13,6 +13,7 @@ class DefaultController extends Controller
 {
     /**
      * @Route("/", name="homepage")
+     * @throws \LogicException
      */
     public function indexAction(Request $request)
     {
@@ -51,9 +52,9 @@ class DefaultController extends Controller
 
         $formData = $form->getData();
 
-        if ($form->getClickedButton() && $form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $requestData = $request->query->get($form->getName());
-
+            dump($requestData);
         }
 
         return $this->render('@App/Default/index.html.twig', [

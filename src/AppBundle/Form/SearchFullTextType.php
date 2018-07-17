@@ -18,6 +18,7 @@ class SearchFullTextType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+          ->setMethod('GET')
           ->add('q', TextType::class, [
             'label' => 'search_form.q.label',
             'attr' => [

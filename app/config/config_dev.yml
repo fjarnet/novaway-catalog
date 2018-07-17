@@ -39,3 +39,28 @@ monolog:
 
 #swiftmailer:
 #    delivery_addresses: ['me@example.com']
+
+bazinga_faker:
+    orm: doctrine
+    entities:
+            Novaway\CommonBundle\Entity\Author:
+                number: 10
+            Novaway\CommonBundle\Entity\Director:
+                number: 10
+            Novaway\CommonBundle\Entity\Actor:
+                number: 10
+            Novaway\CommonBundle\Entity\Book:
+                number: 10
+                custom_formatters:
+                    Isbn:   { method: isbn13, unique: true }
+                    nbPages: { method: randomNumber, parameters: [ 3]}
+            Novaway\CommonBundle\Entity\Dvd:
+                number: 10
+                custom_formatters:
+                    Isan:   { method: lexify, parameters: [ '??????????????????????????' ], unique: true }
+                    duration: { method: randomNumber, parameters: [ 3]}
+                    price: { method: randomFloat, parameters: [ 2, 0, 30]}
+            Novaway\CommonBundle\Entity\Blueray:
+                number: 10
+                custom_formatters:
+                    Isan:   { method: lexify, parameters: [ '??????????????????????????' ], unique: true }

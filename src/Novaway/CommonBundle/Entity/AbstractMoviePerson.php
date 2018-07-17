@@ -8,12 +8,6 @@ abstract class AbstractMoviePerson extends AbstractPerson
 {
     /**
      * @var Movie[]
-     * @ORM\ManyToMany(targetEntity="Novaway\CommonBundle\Entity\Movie", cascade={"persist", "remove"})
-     * @ORM\JoinTable(name="person_movie",
-     *   joinColumns={@ORM\JoinColumn(name="movie_person_id", referencedColumnName="id", onDelete="CASCADE")},
-     *   inverseJoinColumns={@ORM\JoinColumn(name="movie_id", referencedColumnName="id")}
-     * )
-
      */
     private $movies;
 

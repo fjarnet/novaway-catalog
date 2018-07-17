@@ -2,6 +2,7 @@
 
 namespace Novaway\CommonBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
@@ -48,7 +49,7 @@ abstract class Movie
     /**
      * @var string
      *
-     * @ORM\ManyToOne(targetEntity="Novaway\CommonBundle\Entity\Director", inversedBy="movies")
+     * @ORM\ManyToOne(targetEntity="Novaway\CommonBundle\Entity\Director")
      */
     private $director;
 
@@ -81,8 +82,13 @@ abstract class Movie
     private $price;
 
     /**
-     * @var Actor[]
-     * @ORM\ManyToMany(targetEntity="Novaway\CommonBundle\Entity\Actor", cascade={"persist"})
+     * @var ArrayCollection|Actor[]
+     *
+     * @ORM\ManyToMany(targetEntity="Novaway\CommonBundle\Entity\Actor")
+     * @ORM\JoinTable(name="movie_actor",
+     *   joinColumns={@ORM\JoinColumn(name="movie_actor_id", referencedColumnName="id", onDelete="CASCADE")},
+     *   inverseJoinColumns={@ORM\JoinColumn(name="movie_id", referencedColumnName="id")}
+     * )
      */
     private $actors;
 
@@ -265,7 +271,7 @@ abstract class Movie
     }
 
     /**
-     * @param Actor[] $actors
+     * @param ArrayCollection|Actor[] $actors
      *
      * @return Movie
      */
@@ -277,7 +283,7 @@ abstract class Movie
     }
 
     /**
-     * @return Actor[]
+     * @return ArrayCollection|Actor[]
      */
     public function getActors()
     {

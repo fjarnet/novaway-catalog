@@ -4,6 +4,7 @@ namespace Novaway\CommonBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Timestampable\Traits\TimestampableEntity;
+use Novaway\CommonBundle\Entity\Traits\AlertTrait;
 
 /**
  * Class AbstractPerson
@@ -15,6 +16,7 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
  *
  * @ORM\InheritanceType("SINGLE_TABLE")
  * @ORM\DiscriminatorColumn(name="type", type="string", length=10)
+ * @ORM\HasLifecycleCallbacks()
  */
 class AbstractPerson
 {

@@ -12,3 +12,7 @@ publishedAt.label: Publié le
 author.label: Auteur
 isbn.label: ISBN
 nbPages.label: Nb de pages
+
+alert:
+    subject: "Nouveau contenu %type : %keyword"
+    body: Le contenu '%keyword' a été mis à jour !

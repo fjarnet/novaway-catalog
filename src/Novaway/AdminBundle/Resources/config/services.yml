@@ -1,4 +1,8 @@
 services:
-#    novaway_admin.example:
-#        class: Novaway\AdminBundle\Example
-#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    novaway.alert_listener:
+        class: Novaway\AdminBundle\EventListener\AlertListener
+        arguments:
+            - '@mailer'
+            - '@translator'
+        tags:
+            - { name: doctrine.event_listener, event: preUpdate }

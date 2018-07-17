@@ -88,10 +88,48 @@ knp_paginator:
     template:
         pagination: '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig'
 
-#fos_elastica:
-#    clients:
-#        default:
-#            host: '%elastic_search.host%'
-#            port: '%elastic_search.port%'
-#            username: elastic
-#            password: '%elastic_search.password%'
+fos_elastica:
+    clients:
+        default:
+            host: '%elastic_search.host%'
+            port: '%elastic_search.port%'
+    indexes:
+        app:
+            finder: ~
+            types:
+                book:
+                    persistence:
+                        driver: orm
+                        model: Novaway\CommonBundle\Entity\Book
+                        provider: ~
+                        finder: ~
+                dvd:
+                    persistence:
+                        driver: orm
+                        model: Novaway\CommonBundle\Entity\Dvd
+                        provider: ~
+                        finder: ~
+                Blueray:
+                    persistence:
+                        driver: orm
+                        model: Novaway\CommonBundle\Entity\Book
+                        provider: ~
+                        finder: ~
+                actor:
+                    persistence:
+                        driver: orm
+                        model: Novaway\CommonBundle\Entity\Actor
+                        provider: ~
+                        finder: ~
+                director:
+                    persistence:
+                        driver: orm
+                        model: Novaway\CommonBundle\Entity\Director
+                        provider: ~
+                        finder: ~
+                Author:
+                    persistence:
+                        driver: orm
+                        model: Novaway\CommonBundle\Entity\Author
+                        provider: ~
+                        finder: ~

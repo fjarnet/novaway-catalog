@@ -16,3 +16,16 @@ nbPages.label: Nb de pages
 alert:
     subject: "Nouveau contenu %type : %keyword"
     body: Le contenu '%keyword' a été mis à jour !
+
+entities:
+    book.label: Livres
+    blueray.label: Blue-ray
+    dvd.label: DVD
+    actor.label: Acteurs
+    director.label: Réalisateurs
+    author.label: Auteurs
+
+admin:
+    blocks:
+        persons: Personnes
+        articles: Entités

@@ -1,6 +1,9 @@
 My catalog
 ==========
 
+Proposé
+---
+
 * Archi : Docker / PHP-FPM 7.1 / Nginx / Mysql
 * Authentification : HTTP Basic
 * Front : Bootstrap 4 de base / KnpPaginatorBundle
@@ -29,3 +32,17 @@ Côté BDD,
 * une table pour les personnes (acteurs, réalisateurs, ...)
 * une table pour les relations films / acteurs
 * pour les alertes, ce sera probablement en dur dans le code et pas en BDD selon le temps disponible ;-)
+
+
+Développé
+---
+
+Selon le temps dispo, voici ce qui a été fait, et ce qui n'a pas été fait / terminé
+
+- Archi : Docker en place avec un mini Makefile
+- Autentification : OK
+- Front : Listing des 5 derniers films, 5 derniers livres puis accès à leur fiche. A défaut d'avoir des résultats de recherche, la pagination a été mise ici ;-)
+- Back : Toute l'admin est faite (donc toute la modélisation BDD)
+- Recherche : non réalisé. Juste le formulaire, pas le temps pour gérer la config Elasticsearch
+- Alertes : Principe "prêt" (avec abonnés en dur dans le code), manque la finition (envoi effectif du mail / mailcatcher)
+- Fixtures : OK
